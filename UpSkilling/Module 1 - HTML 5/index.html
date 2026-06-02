@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Community Event Portal</title>
+  <link rel="stylesheet" href="../Module 1 - CSS 3/styles.css">
+</head>
+
+<body>
+  <header id="mainHeader">
+    <div class="wrap">
+      <div class="site-title">
+        <h1>Community Event Portal</h1>
+        <div class="badge">Live portal for residents</div>
+      </div>
+      <nav aria-label="Primary navigation" class="pill-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><button class="nav-action-btn" onclick="openRegistrationModal()">Register</button></li>
+          <li><a href="#feedback">Feedback</a></li>
+          <li><a href="#video">Video</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="help.html" target="_blank" rel="noopener">Help</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- HERO -->
+    <section id="home" class="center-content">
+      <div id="welcomeBanner" class="highlight">Hello, resident. Your community updates are ready.</div>
+      <h2 style="color: red;">Welcome to the neighborhood portal</h2>
+      <p>Register for neighborhood events, review locations, connect with support services, and keep your preferences
+        ready for the next visit.</p>
+      <p>Special offer: <span style="color: red; font-weight: bold;">Free parking for weekend volunteers</span></p>
+
+      <div class="info-list">
+        <div class="info-card eventCard">
+          <strong>Today</strong>
+          <span>Community clean-up registration is open.</span>
+        </div>
+        <div class="info-card eventCard">
+          <strong>Location</strong>
+          <span>Central Civic Hall and nearby parks.</span>
+        </div>
+        <div class="info-card eventCard">
+          <strong>Services</strong>
+          <span>Help desk, transport support, and feedback.</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="highlight">Quick access</div>
+        <p>Jump directly to event details, registration, or live contact options.</p>
+        <button class="inline-link" onclick="openRegistrationModal()">Go to registration</button>
+      </div>
+    </section>
+
+    <!-- GALLERY (Uniform equal size) -->
+    <section id="gallery" class="center-content">
+      <h2>Image Gallery for Community Events</h2>
+      <p class="section-subtitle">Past event highlights from the city calendar</p>
+      <div class="gallery-grid">
+        <figure>
+          <img class="gallery-image" ondblclick="enlargeGalleryImage(this)"
+            src="https://images.unsplash.com/photo-1533900298318-6b8da08a523e?auto=format&fit=crop&w=800&q=80"
+            alt="Crowd at a community fair" title="Community fair afternoon">
+          <figcaption>Neighborhood fair with local food stalls and live music.</figcaption>
+        </figure>
+        <figure>
+          <img class="gallery-image" ondblclick="enlargeGalleryImage(this)"
+            src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80"
+            alt="Volunteers at a park cleanup" title="Park cleanup day">
+          <figcaption>Volunteer cleanup day at the riverfront park.</figcaption>
+        </figure>
+        <figure>
+          <img class="gallery-image" ondblclick="enlargeGalleryImage(this)"
+            src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&w=800&q=80"
+            alt="Residents gathered for a workshop" title="Community workshop">
+          <figcaption>Resident workshop focused on public services and planning.</figcaption>
+        </figure>
+        <figure>
+          <img class="gallery-image" ondblclick="enlargeGalleryImage(this)"
+            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"
+            alt="Children enjoying a festival" title="Family festival">
+          <figcaption>Family festival with children's activities and music.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events" class="center-content">
+      <h2>Community Events</h2>
+      <div class="event-stack">
+        <div class="helper-box eventCard">
+          <h3>Morning market walk</h3>
+          <p>Join local vendors, artists, and volunteers for a friendly walk through the market district.</p>
+        </div>
+        <div class="helper-box eventCard">
+          <h3>Family sports evening</h3>
+          <p>Pick-up games, music, and refreshments at the civic field from 5:30 PM onward.</p>
+        </div>
+        <div class="helper-box eventCard">
+          <h3>Service desk clinic</h3>
+          <p>Ask about permits, community support, and neighborhood updates in a simple one-stop session.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section id="schedule" class="center-content">
+      <h2>Event Schedule</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Day</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Morning market walk</td>
+            <td>Monday</td>
+            <td>Market district</td>
+          </tr>
+          <tr>
+            <td>Family sports evening</td>
+            <td>Wednesday</td>
+            <td>Civic field</td>
+          </tr>
+          <tr>
+            <td>Service desk clinic</td>
+            <td>Friday</td>
+            <td>City hall</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- BULLETIN -->
+    <section id="news" class="center-content">
+      <h2>Community Bulletin</h2>
+      <article class="news-article">
+        Residents can check announcements, service notices, and seasonal updates in this bulletin area. The city council
+        uses it to share event reminders, road updates, and volunteer opportunities. Families can use it to plan around
+        public activities, while seniors can look for support services and transportation details.
+      </article>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" class="center-content">
+      <h2>Video Invite</h2>
+      <div class="video-wrap">
+        <video id="promoVideo" controls preload="auto" oncanplay="window.videoReady && window.videoReady()">
+          <source src="video.mp4" type="video/mp4">
+        </video>
+        <div id="videoStatus" class="status-box">Video is loading.</div>
+      </div>
+    </section>
+
+    <!-- FEEDBACK -->
+    <section id="feedback" class="center-content">
+      <h2>Event Feedback</h2>
+      <div class="form-stack">
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input id="phone" type="tel" placeholder="555-123-4567" onblur="validatePhone()" oninput="markFormDirty()">
+        </div>
+        <div id="phoneStatus" class="status-box warning"></div>
+        <div class="field">
+          <label for="feedbackType">Feedback category</label>
+          <select id="feedbackType" onchange="showFeedbackFee(this.value)">
+            <option value="general">General event feedback</option>
+            <option value="transport">Transport support</option>
+            <option value="family">Family services</option>
+          </select>
+        </div>
+        <div id="feedbackFee" class="status-box warning">Select a category to view the fee.</div>
+        <div class="field">
+          <label for="feedbackText">Feedback</label>
+          <textarea id="feedbackText" placeholder="Tell us what worked well" onkeyup="updateCharacterCount()"
+            onkeydown="captureKeyEvent(event)" onkeypress="captureKeyEvent(event)" oninput="markFormDirty()"></textarea>
+        </div>
+        <div id="keyStatus" class="status-box warning">Characters typed: 0</div>
+        <div class="actions">
+          <button type="button" class="secondary" onclick="submitFeedbackConfirmation()">Send feedback</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" class="center-content">
+      <h2>Geolocation for Event Mapping</h2>
+      <p>Use your current location to find the closest community event.</p>
+      <div class="actions">
+        <button type="button" class="primary" onclick="findNearbyEvents()">Find Nearby Events</button>
+      </div>
+      <div id="geoOutput" class="geo-output">Coordinates will appear here.</div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="center-content">
+      <h2>Contact</h2>
+      <div class="event-stack">
+        <div class="helper-box eventCard">
+          <strong>Help desk</strong>
+          <p>Phone: 555-010-2000</p>
+          <p>Email: support@cityevents.local</p>
+        </div>
+        <div class="helper-box eventCard">
+          <strong>Help document</strong>
+          <p><a class="inline-link" href="help.html" target="_blank" rel="noopener">Open the help document</a></p>
+          <p>Use it for quick instructions and event support details.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Local Community Event Portal</p>
+    </div>
+  </footer>
+
+  <!-- REGISTRATION MODAL POPUP -->
+  <div id="registrationModalOverlay" class="modal-overlay is-hidden" onclick="closeRegistrationModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeRegistrationModal()">&times;</button>
+      <h2>Event Registration</h2>
+      <p class="section-subtitle">Fill in your details below to register.</p>
+      <form id="registrationForm" class="form-stack" onsubmit="handleRegistrationSubmit(event)">
+        <div class="field">
+          <label for="fullName">Name</label>
+          <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required
+            oninput="markFormDirty()">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="name@example.com" required oninput="markFormDirty()">
+        </div>
+        <div class="field">
+          <label for="eventDate">Date</label>
+          <input id="eventDate" name="eventDate" type="date" required oninput="markFormDirty()">
+        </div>
+        <div class="field">
+          <label for="eventType">Event Type</label>
+          <select id="eventType" name="eventType" required onchange="updateEventFee(this.value)">
+            <option value="">Choose an event</option>
+            <option value="market">Market Walk</option>
+            <option value="sports">Sports Evening</option>
+            <option value="clinic">Service Clinic</option>
+            <option value="festival">Family Festival</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Share accessibility needs, questions, or notes" required
+            oninput="markFormDirty()"></textarea>
+        </div>
+        <div id="selectedFee" class="status-box">Select an event to see the fee.</div>
+        <div class="actions">
+          <button id="registerBtn" type="submit" class="primary" onclick="showSubmitConfirmation()">Register</button>
+          <button type="button" class="secondary" onclick="clearPreferences()">Clear Preferences</button>
+        </div>
+        <output id="registrationOutput" for="registrationForm"></output>
+      </form>
+    </div>
+  </div>
+
+  <script src="../Module 1 - JS/main.js"></script>
+  <script>
+    // Modal popup logic
+    function openRegistrationModal() {
+      document.getElementById('registrationModalOverlay').classList.remove('is-hidden');
+      document.body.style.overflow = 'hidden'; // Stop background scrolling
+    }
+
+    function closeRegistrationModal(event) {
+      if (event && event.target !== event.currentTarget) return; // Prevent closing if clicking inside the form
+      document.getElementById('registrationModalOverlay').classList.add('is-hidden');
+      document.body.style.overflow = ''; // Restore background scrolling
+    }
+  </script>
+</body>
+
+</html>
