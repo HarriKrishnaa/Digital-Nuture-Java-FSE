@@ -474,6 +474,23 @@ function formatEventCards() {
   return communityEvents.map(({ name }) => `Workshop on ${name.split(" ").slice(-1)[0]}`);
 }
 
+function mapRemoteEvents(posts = [], sourceLabel = "Fetched remotely") {
+  const fallbackNames = [
+    "Community Clean-Up Drive",
+    "Neighborhood Food Fair",
+    "Family Sports Meetup",
+    "Senior Support Workshop",
+    "Public Safety Awareness Session"
+  ];
+
+  return posts.map(({ id }, index) => ({
+    name: fallbackNames[index] || `Community Event ${id}`,
+    location: "Community location",
+    dateLabel: `Remote item #${id}`,
+    summary: sourceLabel
+  }));
+}
+
 /* JavaScript Task 31: Async JavaScript */
 function loadRemoteEventsThen() {
   const loadStatus = document.querySelector("#loadStatus");
@@ -482,14 +499,14 @@ function loadRemoteEventsThen() {
   }
 
   fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Remote request failed with status ${response.status}.`);
+      }
+      return response.json();
+    })
     .then((posts) => {
-      const remoteEvents = posts.map(({ title, id }) => ({
-        name: title,
-        dateLabel: `Remote item #${id}`,
-        summary: "Fetched with then/catch"
-      }));
-      renderEventCards(remoteEvents);
+      renderEventCards(mapRemoteEvents(posts, "Fetched with then/catch"));
       if (loadStatus) {
         loadStatus.textContent = "Remote events loaded with then/catch.";
       }
@@ -506,27 +523,25 @@ function loadRemoteEventsThen() {
 /* JavaScript Task 31: Async JavaScript */
 async function loadRemoteEventsAsync() {
   const loadStatus = document.querySelector("#loadStatus");
-  const spinner = loadStatus;
-  if (spinner) {
-    spinner.textContent = "Loading remote events with async/await...";
+  if (loadStatus) {
+    loadStatus.textContent = "Loading remote events with async/await...";
   }
 
   try {
     const response = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=5");
+    if (!response.ok) {
+      throw new Error(`Remote request failed with status ${response.status}.`);
+    }
+
     const posts = await response.json();
-    const remoteEvents = posts.map(({ title, id }) => ({
-      name: title,
-      dateLabel: `Remote item #${id}`,
-      summary: "Fetched with async/await"
-    }));
-    renderEventCards(remoteEvents);
-    if (spinner) {
-      spinner.textContent = "Remote events loaded with async/await.";
+    renderEventCards(mapRemoteEvents(posts, "Fetched with async/await"));
+    if (loadStatus) {
+      loadStatus.textContent = "Remote events loaded with async/await.";
     }
   } catch (error) {
     console.error("Async remote load failed:", error);
-    if (spinner) {
-      spinner.textContent = "Async load failed. Showing local events instead.";
+    if (loadStatus) {
+      loadStatus.textContent = "Async load failed. Showing local events instead.";
     }
     renderEventCards(communityEvents);
   }
