@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+/* CSS Task 11: CSS Inclusion Methods */
+/* CSS Task 12: CSS Syntax and Comments */
+/* CSS Task 13: Selectors Playground */
 /* Reset */
 * {
   margin: 0;
@@ -7,6 +10,8 @@
   box-sizing: border-box;
 }
 
+/* CSS Task 14: Colors and Backgrounds */
+/* CSS Task 15: Typography */
 body {
   min-height: 100vh;
   font-family: 'Inter', Arial, sans-serif;
@@ -29,6 +34,7 @@ p {
   color: #333333;
 }
 
+/* CSS Task 19: Box Model */
 /* Layout - narrow centralized container */
 .wrap {
   width: min(800px, 92vw);
@@ -48,6 +54,7 @@ section {
   width: 100%;
 }
 
+/* CSS Task 14: Colors and Backgrounds */
 /* Header */
 #mainHeader {
   background: #111111;
@@ -88,6 +95,8 @@ section {
   border: 1px solid rgba(247, 243, 235, 0.2);
 }
 
+/* CSS Task 16: Link Styling */
+/* CSS Task 17: List Styling */
 /* Pill Navigation Bar */
 .pill-nav {
   background: rgba(255, 255, 255, 0.08);
@@ -238,6 +247,7 @@ section h2 {
   border-color: #111111;
 }
 
+/* CSS Task 21: Responsive Design */
 /* Gallery section */
 .section-subtitle {
   color: #555555;
@@ -293,12 +303,14 @@ figcaption {
   text-align: left;
 }
 
+/* CSS Task 20: Multi-Column Layout */
 /* Bulletin */
 .news-article {
   text-align: justify;
   line-height: 1.8;
 }
 
+/* CSS Task 19: Box Model */
 /* Form styles */
 .form-stack {
   display: grid;
@@ -411,6 +423,7 @@ output,
   color: #7a1111; /* Dark red for warnings to fit theme */
 }
 
+/* CSS Task 18: Table Styling */
 /* Table styles */
 .data-table {
   width: 100%;
@@ -499,6 +512,7 @@ footer .wrap {
   padding-top: 18px;
 }
 
+/* CSS Task 21: Responsive Design */
 /* Responsive */
 @media (max-width: 600px) {
   .gallery-grid {
@@ -660,4 +674,83 @@ footer .wrap {
 
 .help-card .back-link:hover {
   background: #333333;
+}
+
+/* Command Reference */
+.command-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 20px 0 8px;
+}
+
+.command-toolbar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  align-items: end;
+}
+
+.command-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.command-card {
+  background: #f4f1ea;
+  border: 1px solid #e2dcd0;
+  border-radius: 14px;
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+  box-shadow: 0 12px 24px rgba(17, 17, 17, 0.05);
+}
+
+.command-card.is-hidden-card {
+  display: none;
+}
+
+.command-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.command-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #111111;
+  color: #f7f3eb;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.copy-command-btn {
+  min-width: 76px;
+}
+
+.command-card h3,
+.command-card p,
+.command-card pre {
+  margin: 0;
+}
+
+.command-card pre {
+  padding: 14px;
+  background: #fffdf8;
+  border: 1px solid #ddd5c5;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.command-card code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.88rem;
+  color: #111111;
 }

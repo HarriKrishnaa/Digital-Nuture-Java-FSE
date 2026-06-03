@@ -9,6 +9,12 @@
 </head>
 
 <body>
+  <!-- HTML Task 1: Create the HTML5 Base Template -->
+  <!-- Command: <!DOCTYPE html>, <html lang="en">, <meta charset="UTF-8">, <head>, <body> -->
+  <!-- Command: Save file as index.html and verify structure in Chrome DevTools -->
+  <!-- Header -->
+  <!-- HTML Task 2: Navigation and Linking -->
+  <!-- Command: <nav>, href="#home", href="#events", href="#contact", href="help.html" target="_blank" -->
   <header id="mainHeader">
     <div class="wrap">
       <div class="site-title">
@@ -31,8 +37,11 @@
     </div>
   </header>
 
+  <!-- Main -->
   <main class="wrap">
 
+    <!-- HTML Task 3: Welcome Banner -->
+    <!-- Command: <div id="welcomeBanner">, <span>, id, class, inline style -->
     <!-- HERO -->
     <section id="home" class="center-content">
       <div id="welcomeBanner" class="highlight">Hello, resident. Your community updates are ready.</div>
@@ -63,7 +72,9 @@
       </div>
     </section>
 
-    <!-- GALLERY (Uniform equal size) -->
+    <!-- HTML Task 4: Image Gallery -->
+    <!-- Command: gallery section with table-style image display, <img>, alt, title, captions -->
+    <!-- GALLERY  -->
     <section id="gallery" class="center-content">
       <h2>Image Gallery for Community Events</h2>
       <p class="section-subtitle">Past event highlights from the city calendar</p>
@@ -95,6 +106,8 @@
       </div>
     </section>
 
+    <!-- HTML Task 2: Navigation and Linking -->
+    <!-- Command: matching internal section id="events" -->
     <!-- EVENTS -->
     <section id="events" class="center-content">
       <h2>Community Events</h2>
@@ -114,6 +127,8 @@
       </div>
     </section>
 
+    <!-- HTML Task 4: Image Gallery -->
+    <!-- Command: <table>, <tr>, <th>, <td> -->
     <!-- SCHEDULE -->
     <section id="schedule" class="center-content">
       <h2>Event Schedule</h2>
@@ -155,6 +170,8 @@
       </article>
     </section>
 
+    <!-- HTML Task 7: Video Invite Section -->
+    <!-- Command: <video controls oncanplay>, <source src="video.mp4" type="video/mp4"> -->
     <!-- VIDEO -->
     <section id="video" class="center-content">
       <h2>Video Invite</h2>
@@ -166,6 +183,8 @@
       </div>
     </section>
 
+    <!-- HTML Task 6: Event Feedback and User Interaction -->
+    <!-- Command: <input type="tel" onblur>, <select onchange>, <textarea>, onclick, ondblclick, keyboard events -->
     <!-- FEEDBACK -->
     <section id="feedback" class="center-content">
       <h2>Event Feedback</h2>
@@ -196,6 +215,8 @@
       </div>
     </section>
 
+    <!-- HTML Task 9: Geolocation Section -->
+    <!-- Command: <button onclick="findNearbyEvents()">, latitude, longitude, error handling -->
     <!-- LOCATION -->
     <section id="location" class="center-content">
       <h2>Geolocation for Event Mapping</h2>
@@ -206,6 +227,10 @@
       <div id="geoOutput" class="geo-output">Coordinates will appear here.</div>
     </section>
 
+    <!-- HTML Task 2: Navigation and Linking -->
+    <!-- Command: matching internal section id="contact", help.html external link -->
+    <!-- HTML Task 10: Footer Section -->
+    <!-- Command: contact information, quick links, help link -->
     <!-- CONTACT -->
     <section id="contact" class="center-content">
       <h2>Contact</h2>
@@ -224,12 +249,19 @@
     </section>
   </main>
 
+  <!-- Footer -->
+  <!-- HTML Task 10: Footer Section -->
+  <!-- Command: contact information, copyright, quick links, help link -->
   <footer>
     <div class="wrap">
       <p>Local Community Event Portal</p>
     </div>
   </footer>
 
+  <!-- HTML Task 5: Event Registration Form -->
+  <!-- Command: <form>, text, email, date, select, textarea, placeholder, required, submit button, output -->
+  <!-- HTML Task 8: User Preferences Section -->
+  <!-- Command: preferred event type selector, localStorage, sessionStorage, Clear Preferences button -->
   <!-- REGISTRATION MODAL POPUP -->
   <div id="registrationModalOverlay" class="modal-overlay is-hidden" onclick="closeRegistrationModal(event)">
     <div class="modal-content" onclick="event.stopPropagation()">
@@ -239,7 +271,7 @@
       <form id="registrationForm" class="form-stack" onsubmit="handleRegistrationSubmit(event)">
         <div class="field">
           <label for="fullName">Name</label>
-          <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required
+          <input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required autofocus
             oninput="markFormDirty()">
         </div>
         <div class="field">
@@ -275,6 +307,8 @@
     </div>
   </div>
 
+  <!-- HTML Task 1: Verify structure using Chrome DevTools -->
+  <!-- Command: inspect DOM structure, attributes, forms, media, and links -->
   <script src="../Module 1 - JS/main.js"></script>
   <script>
     // Modal popup logic

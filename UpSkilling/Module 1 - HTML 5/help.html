@@ -1,116 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- HTML Task 11: Create Help Page Structure -->
+  <!-- Command: help.html, <!DOCTYPE html>, <html lang="en">, <head>, <title>, <body> -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Community Event Help</title>
+  <title>HTML CSS JS Command Reference</title>
   <link rel="stylesheet" href="../Module 1 - CSS 3/styles.css">
-  <style>
-    body {
-      background: #f7f3eb;
-      color: #1a1a1a;
-      padding: 0;
-    }
-
-    .help-card {
-      max-width: 960px;
-      margin: 0 auto;
-      background: #fffdf8;
-      border: 1px solid #e8e2d6;
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 18px 40px rgba(17, 17, 17, 0.08);
-    }
-
-    .help-card h1 {
-      margin-bottom: 12px;
-      color: #000;
-    }
-
-    .help-card h2 {
-      text-align: left;
-      border-bottom-color: #e8e2d6;
-    }
-
-    .help-card ul {
-      margin-top: 16px;
-      padding-left: 1.25rem;
-    }
-
-    .help-card li {
-      margin-bottom: 10px;
-      color: #333;
-      line-height: 1.7;
-    }
-
-    .help-card a {
-      color: #111111;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .help-card a:hover {
-      text-decoration: underline;
-    }
-  </style>
 </head>
 <body>
   <header id="mainHeader">
     <div class="wrap">
       <div class="site-title">
-        <h1>Help Center</h1>
-        <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 4px;">Instructions and guidance for using the community event portal.</p>
-        <div class="badge">Adaptive help</div>
+        <h1>Command Center</h1>
+        <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 4px;">HTML, CSS, and JavaScript commands added into the website as a quick reference.</p>
+        <div class="badge">Frontend reference</div>
       </div>
-      <nav aria-label="Help navigation" class="pill-nav">
+      <nav aria-label="Command navigation" class="pill-nav">
         <ul>
+          <!-- HTML Task 12: Help Navigation -->
+          <!-- Command: <a href="index.html">Home Page</a> -->
           <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#events">Events</a></li>
-          <li><a href="index.html#gallery">Gallery</a></li>
-          <li><a href="index.html#register">Register</a></li>
-          <li><a href="index.html#feedback">Feedback</a></li>
-          <li><a href="index.html#video">Video</a></li>
-          <li><a href="index.html#location">Location</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-          <li><a href="#helpSections">Help</a></li>
+          <li><a href="#commandIntro">Overview</a></li>
+          <li><a href="#commandControls">Search</a></li>
+          <li><a href="#htmlCommands">HTML</a></li>
+          <li><a href="#cssCommands">CSS</a></li>
+          <li><a href="#jsCommands">JavaScript</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
-    <section id="helpSections" class="help-card">
-      <h1>Portal Help</h1>
-      <p>This help page is adapted to match the portal's look and feel. Use the header links to browse main sections quickly.</p>
-      <ul>
-        <li>Use the navigation bar to move directly to Home, Events, Gallery, Register, Feedback, Video, Location, and Contact.</li>
-        <li>Double-click gallery images to enlarge them, then click again to restore.</li>
-        <li>The registration form stores your preferred event type and warns about unsaved form changes.</li>
-        <li>Click the geolocation button in Location to find the nearest event from your browser.</li>
-        <li>Feedback includes a live character count and category-based guidance.</li>
-      </ul>
+    <!-- HTML Task 13: User Guide Section -->
+    <!-- Command: instructions for viewing events, registering, finding nearby events, saving preferences -->
+    <section id="commandIntro" class="help-card">
+      <h1>HTML, CSS, and JavaScript Commands</h1>
+      <p>This page keeps the website build intact and adds only the command reference content you can use while learning or presenting the project.</p>
+      <div class="command-summary">
+        <div class="info-card">
+          <strong>HTML</strong>
+          <span>Structure commands for sections, forms, media, and tables.</span>
+        </div>
+        <div class="info-card">
+          <strong>CSS</strong>
+          <span>Styling commands for layout, spacing, colors, and responsive design.</span>
+        </div>
+        <div class="info-card">
+          <strong>JavaScript</strong>
+          <span>Behavior commands for events, DOM updates, validation, and storage.</span>
+        </div>
+      </div>
       <p><a class="inline-link" href="index.html">Return to the portal</a></p>
     </section>
 
-    <section class="help-card" style="margin-top: 22px;">
-      <h2>How to use this portal</h2>
-      <ul>
-        <li><strong>Home</strong>: overview and quick tips.</li>
-        <li><strong>Events</strong>: browse current community events.</li>
-        <li><strong>Gallery</strong>: view event photos with enlarge support.</li>
-        <li><strong>Register</strong>: sign up and see the event fee immediately.</li>
-        <li><strong>Feedback</strong>: submit event feedback or support requests.</li>
-        <li><strong>Video</strong>: watch the portal promo.</li>
-        <li><strong>Location</strong>: discover nearby events with geolocation.</li>
-        <li><strong>Contact</strong>: get help desk and help document access.</li>
-      </ul>
+    <!-- HTML Task 14: Frequently Asked Questions -->
+    <!-- Command: FAQ for register, event type change, location, clear preferences -->
+    <section id="commandControls" class="help-card">
+      <h2>Find Commands Fast</h2>
+      <div class="command-toolbar">
+        <div class="field">
+          <label for="commandSearch">Search command</label>
+          <input id="commandSearch" type="search" placeholder="Try: addEventListener, flex, form">
+        </div>
+        <div class="field">
+          <label for="commandFilter">Filter by topic</label>
+          <select id="commandFilter">
+            <option value="all">All commands</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+          </select>
+        </div>
+      </div>
+      <div id="commandStatus" class="status-box">Showing all command cards.</div>
+    </section>
+
+    <!-- HTML Task 15: Contact Support Section -->
+    <!-- Command: email, phone number, office address -->
+    <section id="htmlCommands" class="help-card">
+      <h2>HTML Commands</h2>
+      <div class="command-grid">
+        <!-- HTML Task 1: Create the HTML5 base template -->
+        <!-- Command: <!DOCTYPE html>, <html>, <head>, <body> -->
+        <article class="command-card" data-topic="html" data-keywords="html section semantic layout">
+          <div class="command-head">
+            <span class="command-tag">HTML</span>
+            <button class="secondary copy-command-btn" type="button" data-copy='&lt;section id="events"&gt;&lt;/section&gt;'>Copy</button>
+          </div>
+          <h3>Section Block</h3>
+          <p>Use a semantic section to group related website content.</p>
+          <pre><code>&lt;section id="events"&gt;
+  &lt;h2&gt;Community Events&lt;/h2&gt;
+&lt;/section&gt;</code></pre>
+        </article>
+
+        <!-- HTML Task 2: Navigation and linking -->
+        <!-- Command: <nav>, <a href="#contact"> -->
+        <article class="command-card" data-topic="html" data-keywords="html anchor navigation link">
+          <div class="command-head">
+            <span class="command-tag">HTML</span>
+            <button class="secondary copy-command-btn" type="button" data-copy='&lt;a href="#contact"&gt;Contact&lt;/a&gt;'>Copy</button>
+          </div>
+          <h3>Navigation Link</h3>
+          <p>Connect users to another section of the same page.</p>
+          <pre><code>&lt;a href="#contact"&gt;Contact&lt;/a&gt;</code></pre>
+        </article>
+
+        <!-- HTML Task 4: Image gallery -->
+        <!-- Command: <img src="image.jpg" alt="Community event"> -->
+        <article class="command-card" data-topic="html" data-keywords="html image gallery media">
+          <div class="command-head">
+            <span class="command-tag">HTML</span>
+            <button class="secondary copy-command-btn" type="button" data-copy='&lt;img src="image.jpg" alt="Community event"&gt;'>Copy</button>
+          </div>
+          <h3>Image Element</h3>
+          <p>Display gallery images with accessible alternate text.</p>
+          <pre><code>&lt;img src="image.jpg" alt="Community event"&gt;</code></pre>
+        </article>
+
+        <!-- HTML Task 5: Event registration form -->
+        <!-- Command: <input type="email" placeholder="name@example.com" required> -->
+        <article class="command-card" data-topic="html" data-keywords="html form input register">
+          <div class="command-head">
+            <span class="command-tag">HTML</span>
+            <button class="secondary copy-command-btn" type="button" data-copy='&lt;input type="email" placeholder="name@example.com" required&gt;'>Copy</button>
+          </div>
+          <h3>Form Input</h3>
+          <p>Collect user details in registration and feedback forms.</p>
+          <pre><code>&lt;input type="email" placeholder="name@example.com" required&gt;</code></pre>
+        </article>
+
+        <!-- HTML Task 7: Video invite -->
+        <!-- Command: <video controls><source src="video.mp4" type="video/mp4"></video> -->
+        <article class="command-card" data-topic="html" data-keywords="html video media source">
+          <div class="command-head">
+            <span class="command-tag">HTML</span>
+            <button class="secondary copy-command-btn" type="button" data-copy='&lt;video controls&gt;&lt;source src="video.mp4" type="video/mp4"&gt;&lt;/video&gt;'>Copy</button>
+          </div>
+          <h3>Video Player</h3>
+          <p>Embed a local promo or event video inside the page.</p>
+          <pre><code>&lt;video controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+        </article>
+
+        <!-- HTML Task 4: Image gallery -->
+        <!-- HTML Task 5: Event schedule table -->
+        <!-- Command: <table><tr><th>Event</th><td>Market Walk</td></tr></table> -->
+        <article class="command-card" data-topic="html" data-keywords="html table schedule rows columns">
+          <div class="command-head">
+            <span class="command-tag">HTML</span>
+            <button class="secondary copy-command-btn" type="button" data-copy='&lt;table&gt;&lt;tr&gt;&lt;th&gt;Event&lt;/th&gt;&lt;td&gt;Market Walk&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;'>Copy</button>
+          </div>
+          <h3>Table Layout</h3>
+          <p>Present event schedules in rows and columns.</p>
+          <pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Event&lt;/th&gt;&lt;td&gt;Market Walk&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <section id="cssCommands" class="help-card">
+      <h2>CSS Commands</h2>
+      <div class="command-grid">
+        <!-- CSS Task 14: Colors and backgrounds -->
+        <!-- Command: background: #f7f3eb; -->
+        <article class="command-card" data-topic="css" data-keywords="css color background theme">
+          <div class="command-head">
+            <span class="command-tag">CSS</span>
+            <button class="secondary copy-command-btn" type="button" data-copy="background: #f7f3eb;">Copy</button>
+          </div>
+          <h3>Background Color</h3>
+          <p>Apply the light beige site background.</p>
+          <pre><code>background: #f7f3eb;</code></pre>
+        </article>
+
+        <!-- CSS Task 21: Responsive design with flexbox/grid -->
+        <!-- Command: display: flex; -->
+        <article class="command-card" data-topic="css" data-keywords="css display flex layout">
+          <div class="command-head">
+            <span class="command-tag">CSS</span>
+            <button class="secondary copy-command-btn" type="button" data-copy="display: flex;">Copy</button>
+          </div>
+          <h3>Flex Layout</h3>
+          <p>Arrange items in a row or column with flexible spacing.</p>
+          <pre><code>display: flex;
+gap: 12px;</code></pre>
+        </article>
+
+        <!-- CSS Task 21: Responsive design with flexbox/grid -->
+        <!-- Command: grid-template-columns: repeat(2, 1fr); -->
+        <article class="command-card" data-topic="css" data-keywords="css grid gallery responsive">
+          <div class="command-head">
+            <span class="command-tag">CSS</span>
+            <button class="secondary copy-command-btn" type="button" data-copy="grid-template-columns: repeat(2, 1fr);">Copy</button>
+          </div>
+          <h3>Grid Columns</h3>
+          <p>Build a clean gallery layout with equal columns.</p>
+          <pre><code>display: grid;
+grid-template-columns: repeat(2, 1fr);</code></pre>
+        </article>
+
+        <!-- CSS Task 19: Box model -->
+        <!-- Command: padding: 32px; -->
+        <article class="command-card" data-topic="css" data-keywords="css padding spacing box">
+          <div class="command-head">
+            <span class="command-tag">CSS</span>
+            <button class="secondary copy-command-btn" type="button" data-copy="padding: 32px;">Copy</button>
+          </div>
+          <h3>Padding</h3>
+          <p>Create breathing room inside cards and sections.</p>
+          <pre><code>padding: 32px;</code></pre>
+        </article>
+
+        <!-- CSS Task 19: Box model -->
+        <!-- Command: border-radius: 14px; -->
+        <article class="command-card" data-topic="css" data-keywords="css border radius card">
+          <div class="command-head">
+            <span class="command-tag">CSS</span>
+            <button class="secondary copy-command-btn" type="button" data-copy="border-radius: 14px;">Copy</button>
+          </div>
+          <h3>Rounded Corners</h3>
+          <p>Soften cards, panels, and buttons for the current design.</p>
+          <pre><code>border-radius: 14px;</code></pre>
+        </article>
+
+        <!-- CSS Task 21: Responsive design -->
+        <!-- Command: @media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } } -->
+        <article class="command-card" data-topic="css" data-keywords="css media query mobile responsive">
+          <div class="command-head">
+            <span class="command-tag">CSS</span>
+            <button class="secondary copy-command-btn" type="button" data-copy="@media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }">Copy</button>
+          </div>
+          <h3>Media Query</h3>
+          <p>Adjust the layout for smaller mobile screens.</p>
+          <pre><code>@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <section id="jsCommands" class="help-card">
+      <h2>JavaScript Commands</h2>
+      <div class="command-grid">
+        <!-- JavaScript Task 29: DOM manipulation -->
+        <!-- Command: document.getElementById("feedbackText"); -->
+        <article class="command-card" data-topic="js" data-keywords="javascript dom getelementbyid select">
+          <div class="command-head">
+            <span class="command-tag">JavaScript</span>
+            <button class="secondary copy-command-btn" type="button" data-copy='document.getElementById("feedbackText");'>Copy</button>
+          </div>
+          <h3>Select an Element</h3>
+          <p>Grab an element from the page before updating it.</p>
+          <pre><code>document.getElementById("feedbackText");</code></pre>
+        </article>
+
+        <!-- JavaScript Task 30: Event handling -->
+        <!-- Command: button.addEventListener("click", handleClick); -->
+        <article class="command-card" data-topic="js" data-keywords="javascript addEventListener event click">
+          <div class="command-head">
+            <span class="command-tag">JavaScript</span>
+            <button class="secondary copy-command-btn" type="button" data-copy='button.addEventListener("click", handleClick);'>Copy</button>
+          </div>
+          <h3>Attach Event Listener</h3>
+          <p>Run JavaScript when the user clicks or types.</p>
+          <pre><code>button.addEventListener("click", handleClick);</code></pre>
+        </article>
+
+        <!-- JavaScript Task 29: DOM manipulation -->
+        <!-- Command: status.textContent = "Form submitted."; -->
+        <article class="command-card" data-topic="js" data-keywords="javascript textcontent dom update">
+          <div class="command-head">
+            <span class="command-tag">JavaScript</span>
+            <button class="secondary copy-command-btn" type="button" data-copy='status.textContent = "Form submitted.";'>Copy</button>
+          </div>
+          <h3>Update Text</h3>
+          <p>Change visible content dynamically after an action.</p>
+          <pre><code>status.textContent = "Form submitted.";</code></pre>
+        </article>
+
+        <!-- HTML Task 8: User preferences -->
+        <!-- JavaScript Task 33: Form handling -->
+        <!-- Command: localStorage.setItem("preferredEventType", value); -->
+        <article class="command-card" data-topic="js" data-keywords="javascript localstorage save browser">
+          <div class="command-head">
+            <span class="command-tag">JavaScript</span>
+            <button class="secondary copy-command-btn" type="button" data-copy='localStorage.setItem("preferredEventType", value);'>Copy</button>
+          </div>
+          <h3>Save to Local Storage</h3>
+          <p>Store preferences so they remain after refresh.</p>
+          <pre><code>localStorage.setItem("preferredEventType", value);</code></pre>
+        </article>
+
+        <!-- JavaScript Task 25: Functions -->
+        <!-- Command: function validatePhone() { /* validation logic */ } -->
+        <article class="command-card" data-topic="js" data-keywords="javascript function validation phone">
+          <div class="command-head">
+            <span class="command-tag">JavaScript</span>
+            <button class="secondary copy-command-btn" type="button" data-copy='function validatePhone() { /* validation logic */ }'>Copy</button>
+          </div>
+          <h3>Function Declaration</h3>
+          <p>Define reusable logic for validation or other page actions.</p>
+          <pre><code>function validatePhone() {
+  // validation logic
+}</code></pre>
+        </article>
+
+        <!-- JavaScript Task 22: JavaScript setup -->
+        <!-- Command: document.addEventListener("DOMContentLoaded", initializePage); -->
+        <article class="command-card" data-topic="js" data-keywords="javascript domcontentloaded init load">
+          <div class="command-head">
+            <span class="command-tag">JavaScript</span>
+            <button class="secondary copy-command-btn" type="button" data-copy='document.addEventListener("DOMContentLoaded", initializePage);'>Copy</button>
+          </div>
+          <h3>Page Ready Event</h3>
+          <p>Initialize the interface after the HTML finishes loading.</p>
+          <pre><code>document.addEventListener("DOMContentLoaded", initializePage);</code></pre>
+        </article>
+      </div>
     </section>
   </main>
 
+  <!-- HTML Task 16: Help Footer -->
+  <!-- Command: Back to Home link, copyright information -->
   <footer>
     <div class="wrap">
-      <p>Community Event Help · Adaptive portal support</p>
+      <p>HTML CSS JS Command Reference - Community portal support</p>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

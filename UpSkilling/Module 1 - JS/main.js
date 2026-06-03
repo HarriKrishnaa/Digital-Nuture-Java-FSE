@@ -1,9 +1,11 @@
+/* JavaScript Task 22: JavaScript Setup */
 console.log("Welcome to the Community Portal");
 
 window.addEventListener("load", () => {
   alert("The page is fully loaded.");
 });
 
+/* JavaScript Task 23: Variables and Operators */
 const sampleEventName = "Community Spring Fair";
 const sampleEventDate = "2026-06-18";
 let sampleSeats = 30;
@@ -25,6 +27,7 @@ const nearbyEvents = [
   { name: "Community Sports Field", lat: 40.7063, lon: -74.0122 }
 ];
 
+/* JavaScript Task 27: Objects and Classes */
 class Event {
   constructor(name, date, seats, category, location) {
     this.name = name;
@@ -50,11 +53,13 @@ const communityEvents = [
   new Event("Creative baking workshop", "2026-06-08", 12, "workshop", "Community kitchen")
 ];
 
+/* JavaScript Task 25: Functions */
 function addEvent(eventList = [], eventItem) {
   eventList.push(eventItem);
   return eventList;
 }
 
+/* JavaScript Task 26: Closures */
 const categoryTracker = createCategoryTracker();
 
 function createCategoryTracker() {
@@ -95,6 +100,7 @@ function filterEventsByCategory(events = [], category = "all", callback = (event
     .filter(callback);
 }
 
+/* JavaScript Task 28: Arrays and Methods */
 function getEventEntries(eventItem) {
   return Object.entries(eventItem).map(([key, value]) => `${key}: ${value}`);
 }
@@ -104,6 +110,7 @@ function markFormDirty() {
   sessionStorage.setItem("portalFormDirty", "true");
 }
 
+/* JavaScript Task 33: Form Handling */
 function updateEventFee(value) {
   const selectedFee = document.getElementById("selectedFee");
   const feeText = value ? `Selected event fee: ${eventFees[value] || "$0"}` : "Select an event to see the fee.";
@@ -143,6 +150,7 @@ function restorePreferences() {
   }
 }
 
+/* JavaScript Task 30: Event Handling */
 function validatePhone() {
   const phoneInput = document.getElementById("phone");
   const status = document.getElementById("phoneStatus");
@@ -184,6 +192,7 @@ function showSubmitConfirmation() {
   console.log("Registration submit button clicked");
 }
 
+/* JavaScript Task 33: Form Handling */
 function handleRegistrationSubmit(event) {
   event.preventDefault();
   const form = event.currentTarget;
@@ -235,6 +244,7 @@ function submitFeedbackConfirmation() {
   document.getElementById("keyStatus").textContent = "Feedback button clicked. Your message is ready to send.";
 }
 
+/* JavaScript Task 29: DOM Manipulation */
 function enlargeGalleryImage(image) {
   image.classList.toggle("enlarged");
 }
@@ -245,6 +255,7 @@ function videoReady() {
 
 window.videoReady = videoReady;
 
+/* JavaScript Task 32: Modern JavaScript */
 function clearPreferences() {
   localStorage.clear();
   sessionStorage.clear();
@@ -257,6 +268,7 @@ function clearPreferences() {
   console.log("Preferences cleared");
 }
 
+/* HTML Task 9: Geolocation */
 function findNearbyEvents() {
   const output = document.getElementById("geoOutput");
 
@@ -322,6 +334,7 @@ function haversineDistance(lat1, lon1, lat2, lon2) {
   return earthRadius * c;
 }
 
+/* JavaScript Task 29: DOM Manipulation */
 function createJsLabSection() {
   const main = document.querySelector("main");
   if (!main || document.querySelector("#jsLab")) {
@@ -369,6 +382,9 @@ function createJsLabSection() {
   loadAsyncBtn?.addEventListener("click", loadRemoteEventsAsync);
 }
 
+/* JavaScript Task 24: Conditionals and Loops */
+/* JavaScript Task 29: DOM Manipulation */
+/* JavaScript Task 30: Event Handling */
 function renderEventCards(eventList = communityEvents) {
   const listContainer = document.querySelector("#eventList");
   if (!listContainer) {
@@ -458,6 +474,7 @@ function formatEventCards() {
   return communityEvents.map(({ name }) => `Workshop on ${name.split(" ").slice(-1)[0]}`);
 }
 
+/* JavaScript Task 31: Async JavaScript */
 function loadRemoteEventsThen() {
   const loadStatus = document.querySelector("#loadStatus");
   if (loadStatus) {
@@ -486,6 +503,7 @@ function loadRemoteEventsThen() {
     });
 }
 
+/* JavaScript Task 31: Async JavaScript */
 async function loadRemoteEventsAsync() {
   const loadStatus = document.querySelector("#loadStatus");
   const spinner = loadStatus;
@@ -514,6 +532,7 @@ async function loadRemoteEventsAsync() {
   }
 }
 
+/* JavaScript Task 34: AJAX and Fetch API */
 function submitRegistrationAjax(payload) {
   const status = document.querySelector("#registrationOutput");
   if (status) {
@@ -547,6 +566,7 @@ function submitRegistrationAjax(payload) {
   }, 800);
 }
 
+/* JavaScript Task 35: Debugging and jQuery */
 function initializeJQueryDemo() {
   if (!window.jQuery) {
     console.log("jQuery is not loaded. React or Vue would be a better fit for larger portals because they make reusable components and state management easier.");
@@ -559,12 +579,14 @@ function initializeJQueryDemo() {
   });
 }
 
+/* JavaScript Task 35: Debugging and jQuery */
 function logEventDetailsToConsole() {
   communityEvents.forEach((eventItem) => {
     console.log("Event entries:", getEventEntries(eventItem).join(" | "));
   });
 }
 
+/* JavaScript Task 32: Modern JavaScript */
 function initializePortal() {
   restorePreferences();
   setCharacterCountDisplay();
